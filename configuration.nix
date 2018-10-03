@@ -16,6 +16,15 @@
       grub.version = 2;
     };
   };
+  
+  fileSystems = [
+   # Mount the root file system
+   #
+     { mountPoint = "/";
+       device = "/dev/vda1";
+       label = "root";
+     }
+  ];
 
   environment = {
     systemPackages = with pkgs; [

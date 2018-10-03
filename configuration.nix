@@ -70,11 +70,11 @@
       ghost = {
         extraGroups = [ "wheel" ];
         isNormalUser = true;
-        openssh.authorizedKeys.keys = with import ./ssh-keys.nix; [ sean ];
+        openssh.authorizedKeys.keys = with import ./ssh-keys.nix; [ bobbles ];
       };
 
       root = {
-        openssh.authorizedKeys.keys = with import ./ssh-keys.nix; [ sean ];
+        openssh.authorizedKeys.keys = with import ./ssh-keys.nix; [ bobbles ];
       };
     };
   };
